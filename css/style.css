@@ -1,0 +1,302 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+/* header */
+header{
+    height: 70px;
+    border-bottom: 2px solid;
+}
+header h1 {
+    display: inline-block;
+	padding:15px 24px;
+    text-transform: uppercase;
+}
+header h1 a{
+    transition: 0.3s;
+}
+header h1 a:hover{
+    color: royalblue;
+}
+header ul{
+    float: right;
+}
+header ul li{
+    padding: 24px;
+    display: inline-block;
+}
+header ul li a{
+    transition: 0.3s;
+}
+header ul li a:hover{
+    color: royalblue;
+}
+.container-h {
+    width: 90%;
+    margin: 0 auto;
+}
+.container-h a.active{
+    font-weight: 900;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+/* section */
+section h3{
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+section h3::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    height: 2px;
+    background-color: #05386b;
+    left: calc(50% - 60px);
+}
+/* container */
+.container {
+    width: 92%;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.container::after{
+    content:'';
+    display: block;
+    clear: both;
+}
+
+#map h3, #map .container{
+    opacity: 0;
+}
+
+/* map */
+#map {
+    position: absolute;
+    top: 72px;
+    bottom: 0;
+    width: 100%;
+    height: 100%-70px; 
+}
+.rounded-rect {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 50px -25px black;
+}
+    
+.flex-center {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+.flex-center.left {
+    left: 0px;
+}
+    
+.flex-center.right {
+    right: 0px;
+}
+    
+.sidebar-content {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    color: gray;
+}
+    
+.sidebar-toggle {
+    position: absolute;
+    width: 1.3em;
+    height: 1.3em;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+.sidebar-toggle.left {
+    right: -1.5em;
+}
+    
+.sidebar-toggle.right {
+    left: -1.5em;
+}
+    
+.sidebar-toggle:hover {
+    color: #0aa1cf;
+    cursor: pointer;
+}
+     
+.sidebar {
+    transition: transform 1s;
+    z-index: 1;
+    width: 300px;
+    height: 100%;
+}
+     
+/*
+The sidebar styling has them "expanded" by default, we use CSS transforms to push them offscreen
+The toggleSidebar() function removes this class from the element in order to expand it.
+*/
+     
+.right.collapsed {
+    transform: translateX(295px);
+}
+
+.marker {
+    background-image: url('./img/hospital.png');
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.mapboxgl-popup-content {
+    max-width: 700px;
+    text-align: center;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+/* footer */
+footer{
+    background-color: #333;
+    padding: 30px;
+    text-align: right;
+}
+footer small{
+    color: #fff;
+}
+
+.heading {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    min-height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    background-color: #417391;
+    color: #fff;
+}
+  
+.listings {
+    height: 85%;
+    overflow: auto;
+    padding-bottom: 60px;
+}
+  
+.listings .item {
+    display: block;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    text-decoration: none;
+}
+  
+.listings .item:last-child {
+    border-bottom: none;
+}
+
+.listings .item .title {
+    display: block;
+    color: #d68060;
+    font-weight: 700;
+}
+  
+.listings .item .title small {
+    font-weight: 400;
+}
+
+.listings .item.active .title,
+.listings .item .title:hover {
+    color: #f1ae89;
+}
+
+.listings .item.active {
+    background-color: #f8f8f8;
+}
+  
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-left: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d68060;
+    border-radius: 0;
+}
+
+.mapboxgl-ctrl-geocoder {
+    border: 0;
+    border-radius: 0;
+    position: relative;
+    top: 0;
+    width: 800px;
+    margin-top: 0;
+  }
+  
+  .mapboxgl-ctrl-geocoder > div {
+    min-width: 100%;
+    margin-left: 0;
+  }
+
+#menu {
+    background: #fff;
+    position: absolute;
+    z-index: 1;
+    top: 80px;
+    right: 10px;
+    border-radius: 3px;
+    width: 120px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    font-family: 'Open Sans', sans-serif;
+}
+     
+#menu a {
+    font-size: 13px;
+    color: #404040;
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+     
+#menu a:last-child {
+    border: none;
+}
+     
+#menu a:hover {
+    background-color: #f8f8f8;
+    color: #404040;
+}
+     
+#menu a.active {
+    background-color: #3887be;
+    color: #ffffff;
+}
+     
+#menu a.active:hover {
+    background: #3074a4;
+}

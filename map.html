@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Rumah Sakit Rujukan COVID-19</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <!-- Mapbox GL JS -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js"></script>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/turf/v3.0.11/turf.min.js'></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Load the `mapbox-gl-geocoder` plugin. -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
+
+    <!-- Turf & Polyline -->
+    <script src="https://npmcdn.com/@turf/turf/turf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mapbox-polyline/1.1.1/polyline.js"></script>
+    
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- driving direction -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+    <link
+        rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+        type="text/css"
+    />
+
+    <header>
+        <div class="container-h">
+            <h1>RUMAH SAKIT RUJUKAN COVID-19 KABUPATEN KEBUMEN</h1>
+        </div>
+    </header>
+
+    <nav id="menu"></nav>
+    <div id="map">
+        <!-- <div id="right" class="sidebar flex-center right collapsed">
+            <div id="listings" class="listings"></div>
+            <div class="sidebar-content rounded-rect flex-center">
+            Right Sidebar
+                <div class="sidebar-toggle rounded-rect right" onclick="toggleSidebar('right')">
+                    &larr;
+                </div>
+            </div>
+        </div -->
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
